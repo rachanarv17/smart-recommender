@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg,#4f46e5,#7c3aed);
+  min-height: 100vh;
+}
+
+.screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  color: white;
+}
+
+.glass-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #4f46e5;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden { display: none !important; }
+
+#app {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+select {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+#map {
+  height: 300px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.details-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin: 20px 0 10px;
+  font-weight: 600;
+}
+
+.results-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.favorite-btn {
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.clear-btn {
+  margin-left: 10px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  background: #111;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  background: #333;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.history-box {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.dark {
+  background: #121212;
+}
+
+.dark #app,
+.dark .card,
+.dark .details-panel,
+.dark .history-box {
+  background: #2c2c2c;
+  color: white;
+}

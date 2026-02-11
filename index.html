@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smart Mood Explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro" class="screen">
+  <div class="glass-card">
+    <h1>🌍 Smart Mood Explorer</h1>
+    <p>Discover places based on your mood & budget</p>
+    <button class="primary-btn" onclick="goToLogin()">Get Started</button>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="screen hidden">
+  <div class="glass-card">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="primary-btn" onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" class="hidden">
+
+  <div class="navbar">
+    <h2>Smart Explorer</h2>
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+  </div>
+
+  <div class="controls">
+    <select id="mood">
+      <option value="cafe">💻 Work / Study</option>
+      <option value="restaurant">🍽 Restaurant</option>
+      <option value="fast_food">🍔 Fast Food</option>
+      <option value="park">🌳 Park</option>
+      <option value="gym">🏋️ Gym</option>
+      <option value="library">📚 Library</option>
+    </select>
+
+    <select id="priceFilter">
+      <option value="all">💰 Any Budget</option>
+      <option value="low">Low Budget</option>
+      <option value="medium">Medium Budget</option>
+      <option value="high">Premium</option>
+    </select>
+
+    <button class="primary-btn" onclick="findPlaces()">Find Places</button>
+  </div>
+
+  <div id="map"></div>
+
+  <div id="detailsPanel" class="details-panel hidden"></div>
+
+  <h3 class="section-title">
+    ❤️ Favorites
+    <button onclick="clearFavorites()" class="clear-btn">🗑 Clear All</button>
+  </h3>
+  <div id="favorites" class="results-grid"></div>
+
+  <h3 class="section-title">
+    🕒 Search History
+    <button onclick="clearHistory()" class="clear-btn">🗑 Clear All</button>
+  </h3>
+  <div id="history" class="history-box"></div>
+
+  <h3 class="section-title">Results</h3>
+  <div id="results" class="results-grid"></div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
